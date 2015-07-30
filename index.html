@@ -5,4 +5,9 @@ title: Chen Feng's Homepage
 <div class="blurb">
 	<h1>Hi there, I'm Chen Feng!</h1>
 	<p>This is the init version of my homepage. <em>I'm trying to move to GitHub pages</em> using Jekyll. <a href="/about">Read more about me.</a></p>
+	<ul class="posts">
+		{% for post in site.posts %}
+		<li><span>{{ post.date | date_to_string }}</span> : <a href="{{ post.url }}">{{ post.title }}</a></li>
+		{% endfor %}
+	</ul>
 </div>

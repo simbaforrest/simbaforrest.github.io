@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Chen Feng, Launches Site"
+title: Launches Site
 date: 2015-07-29
 ---
 
