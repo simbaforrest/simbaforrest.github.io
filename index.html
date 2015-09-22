@@ -1,13 +1,10 @@
 ---
-layout: default
+layout: homepage
 title: Chen Feng's Homepage
 ---
-<div class="blurb">
-	<h1>Hi there, I'm Chen Feng!</h1>
-	<p>This is the init version of my homepage. <em>I'm trying to move to GitHub pages</em> using Jekyll. <a href="/about">Read more about me.</a></p>
-	<ul class="posts">
-		{% for post in site.posts %}
-		<li><span>{{ post.date | date_to_string }}</span> : <a href="{{ post.url }}">{{ post.title }}</a></li>
-		{% endfor %}
-	</ul>
-</div>
+<p><b>I graduated in 2015, and I'm currently visiting <a href="http://www.merl.com/">Mitsubishi Electric Research Laboratories (MERL)</a> as <a href="http://www.merl.com/people/cfeng">a visiting researcher</a>.</b></p>
+<p>I was a PhD student in the <a href="http://www.cee.umich.edu">Department of Civil and Environmental Engineering</a> of the <a href="http://www.umich.edu/">University of Michigan</a> and a member of the <a href="http://pathfinder.engin.umich.edu/"> Laboratory for Interactive Visualization in Engineering (LIVE)</a>. My advisor is <a href="http://pathfinder.engin.umich.edu/">Professor Vineet R. Kamat.</a> I previously graduated from <a href="http://www.whu.edu.cn/">Wuhan University</a> in China with BEng in Photogrammetry and Remote Sensing.</p>
+<p>My research interests include Computer Vision, Photogrammetry, Robotics, Machine Learning, Augmented Reality, and their applications in civil engineering.</p>
+
+{% include bottom.html %}
+<!-- I Love you, Shasha, ^_^ -->

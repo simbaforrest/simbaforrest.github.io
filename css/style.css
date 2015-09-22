@@ -1,0 +1,288 @@
+/*--Main--*/
+body {
+    width: 80%;
+    margin: 40px auto;
+    font-family: 'trebuchet MS', 'Lucida sans', Arial;
+    font-size: 20px;
+    color: #444;
+}
+
+#myname {
+	vertical-align: middle;
+	text-align: center;
+	font-size: 30px;
+	font-family:comic sans ms,cursive;
+}
+
+#myname_chinese {
+	vertical-align: middle;
+	text-align: right;
+	padding-right:4%;
+	font-size:26px;
+	font-family:comic sans ms,cursive;
+}
+
+#myphoto {
+	vertical-align: middle;
+	text-align:center;
+}
+
+#mytitle {
+	font-family:comic sans ms,cursive;
+	font-size:22px;
+	font-weight:bold;
+}
+
+#content {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#content p {
+	padding: 10px 10px 10px 10px;
+}
+
+/*--Table--*/
+table {
+	*border-collapse: collapse; /* IE7 and lower */
+    border-spacing: 0;
+}
+
+.bordered {
+	margin-left: auto;
+	margin-right: auto;
+    border-style: none;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+
+.bordered td:hover {
+    background: #fbf8e9;
+    -o-transition: all 0.1s ease-in-out;
+    -webkit-transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+    -ms-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;     
+}
+
+.bordered tr:target {
+	background: yellow;
+}
+
+.bordered td, .bordered th {
+    padding: 10px;
+    text-align: left;    
+}
+
+.bordered th {
+    background-color: #dce9f9;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#ebf3fc), to(#dce9f9));
+    background-image: -webkit-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image:    -moz-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image:     -ms-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image:      -o-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image:         linear-gradient(top, #ebf3fc, #dce9f9);
+	border-top: none;
+}
+
+.bordered td:first-child, .bordered th:first-child {
+	border-style: none;
+}
+
+.bordered th:first-child {
+    -moz-border-radius: 10px 0 0 10px;
+    -webkit-border-radius: 10px 0 0 10px;
+    border-radius: 10px 0 0 10px;
+}
+
+.bordered th:last-child {
+    -moz-border-radius: 0 10px 10px 0;
+    -webkit-border-radius: 0 10px 10px 0;
+    border-radius: 0 10px 10px 0;
+}
+
+.bordered th:only-child{
+    -moz-border-radius: 10px 10px 0 0;
+    -webkit-border-radius: 10px 10px 0 0;
+    border-radius: 10px 10px 0 0;
+}
+
+.bordered tr:last-child td:first-child {
+    -moz-border-radius: 0 0 0 10px;
+    -webkit-border-radius: 0 0 0 10px;
+    border-radius: 0 0 0 10px;
+}
+
+.bordered tr:last-child td:last-child {
+    -moz-border-radius: 0 0 10px 0;
+    -webkit-border-radius: 0 0 10px 0;
+    border-radius: 0 0 10px 0;
+}
+
+/*--Menu--*/
+#menu{
+	margin-left: auto;
+	margin-right: auto;
+    text-align: center;
+	margin-top: 10px;
+	padding: 10px 0 0px 0;
+	list-style: none;
+    background-color: #dce9f9;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#ebf3fc), to(#dce9f9));
+    background-image: -webkit-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image:    -moz-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image:     -ms-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image:      -o-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image:         linear-gradient(top, #ebf3fc, #dce9f9);
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+}
+
+#menu li{
+	display: inline-block;
+	padding: 0 0 10px 0;
+	position: relative;
+}
+
+#menu a{
+	display: inline-block;
+	height: 25px;
+	padding: 0 25px;
+	text-transform: capitalize;
+	font: bold 20px/25px Arial, Helvetica;
+	text-decoration: none;
+}
+
+#menu li:hover > a{
+	color: #fafafa;
+}
+
+*html #menu li a:hover{ /* IE6 */
+	color: #fafafa;
+}
+
+#menu li:hover > ul{
+	display: block;
+}
+
+/*--Sub-menu--*/
+#menu ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;    
+    display: none;
+    position: absolute;
+    top: 35px;
+    left: 0;
+    z-index: 99999;
+    background-color: #dce9f9;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#ebf3fc), to(#dce9f9));
+    background-image: -webkit-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image:    -moz-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image:     -ms-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image:      -o-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image:         linear-gradient(top, #ebf3fc, #dce9f9);
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+#menu ul li{
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+
+#menu ul a{    
+    padding: 10px;
+    height: auto;
+    line-height: 1;
+    display: block;
+    white-space: nowrap;
+    text-transform: none;
+}
+
+*html #menu ul a{ /* IE6 */   
+	height: 10px;
+	width: 150px;
+}
+
+*:first-child+html #menu ul a{ /* IE7 */    
+	height: 10px;
+	width: 150px;
+}
+
+#menu ul a:hover{
+    background: #0186ba;
+	background: -moz-linear-gradient(#04acec,  #0186ba);	
+	background: -webkit-gradient(linear, left top, left bottom, from(#04acec), to(#0186ba));
+	background: -webkit-linear-gradient(#04acec,  #0186ba);
+	background: -o-linear-gradient(#04acec,  #0186ba);
+	background: -ms-linear-gradient(#04acec,  #0186ba);
+	background: linear-gradient(#04acec,  #0186ba);
+}
+
+#menu ul li:first-child a{
+    -moz-border-radius: 5px 5px 0 0;
+    -webkit-border-radius: 5px 5px 0 0;
+    border-radius: 5px 5px 0 0;
+}
+
+#menu ul li:first-child a:after{
+    content: '';
+    position: absolute;
+    left: 30px;
+    top: -8px;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 8px solid #444;
+}
+
+#menu ul li:first-child a:hover:after{
+    border-bottom-color: #04acec; 
+}
+
+#menu ul li:last-child a{
+    -moz-border-radius: 0 0 5px 5px;
+    -webkit-border-radius: 0 0 5px 5px;
+    border-radius: 0 0 5px 5px;
+}
+
+* html #menu             { zoom: 1; } /* IE6 */
+*:first-child+html #menu { zoom: 1; } /* IE7 */
+
+/*--Video: http://css-tricks.com/NetMag/FluidWidthVideo/Article-FluidWidthVideo.php --*/
+.videoWrapper {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+}
+.videoWrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+/*--Image--*/
+div.figure{
+	margin:2px;
+	text-align:center;
+}
+div.caption{
+	text-align:center;
+	font-weight:bold;
+	margin:2px;
+}
+
+/*--Paper--*/
+#bibtexnumber{
+	width:20%;
+}
+#bibtexitem{
+	width:80%;
+}
