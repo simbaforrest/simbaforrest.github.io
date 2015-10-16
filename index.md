@@ -12,4 +12,3 @@ I obtained my:
 
 My research interests include Computer Vision, Photogrammetry, Robotics, Machine Learning, Augmented Reality, and their applications in civil engineering.
 {% include bottom.html %}
-<!-- I Love you, Shasha, ^_^ -->
