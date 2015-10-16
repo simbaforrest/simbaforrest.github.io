@@ -1,3 +1,4 @@
 name: Chen Feng
-markdown: kramdown
+markdown: redcarpet
+highlighter: pygments
 encoding: utf-8

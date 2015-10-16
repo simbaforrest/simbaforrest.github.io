@@ -4,7 +4,11 @@
 			<title>{{ page.title }}</title>
 			<!-- link to main stylesheet -->
 			<link rel="stylesheet" type="text/css" href="/css/blog.css">
+			<link rel="stylesheet" href="/css/pygments.css">
 			{% include key_navigation.html %}
+			{% if page.type == "mathpost" %}
+				{% include mathjax.html %}
+			{% endif %}
 		</head>
 		<body>
 			<nav>

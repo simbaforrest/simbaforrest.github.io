@@ -6,8 +6,8 @@ $(function() {
     });
     
     $(document).keydown(function(e) {
-        if (e.keyCode == 40 || e.keyCode == 38) {
-            var moveTo = $a.index($("a:focus")[0]) + (e.keyCode == 40 ? 1 : -1);
+        if (e.keyCode == 39 || e.keyCode == 37) {
+            var moveTo = $a.index($("a:focus")[0]) + (e.keyCode == 39 ? 1 : -1);
             //console.log(moveTo)
             $a.eq(moveTo % $a.length).focus();
         }
