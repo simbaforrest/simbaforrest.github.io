@@ -1,0 +1,18 @@
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+<script type="text/javascript">
+$(function() {
+    var $a = $("a").click(function () {
+        this.focus();
+    });
+    
+    $(document).keydown(function(e) {
+        if (e.keyCode == 40 || e.keyCode == 38) {
+            var moveTo = $a.index($("a:focus")[0]) + (e.keyCode == 40 ? 1 : -1);
+            //console.log(moveTo)
+            $a.eq(moveTo % $a.length).focus();
+        }
+    });
+    
+    $a.filter(':first').focus();
+});
+</script>
