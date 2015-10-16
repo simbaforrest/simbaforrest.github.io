@@ -23,7 +23,13 @@ this $sin(x^2)$, or this
 4. [code highlighting](http://tuxette.nathalievilla.org/?p=1574) (note: pygmentize.exe locates under *Python\Scripts*, also check [this incompatibility problem between pygments and MathJax](https://github.com/mathjax/mathjax-docs/wiki/MathJax-CSS-classes-etc#mathjax-vs-pygments))     
 like this
    
-```python
-s = "Python syntax highlighting"
-print s
-```
+	```python
+	s = "Python syntax highlighting"
+	print s
+	```
+5. [redcarpet markdown configuration](http://sholsinger.com/2014/03/jekyll-github-flavored-markdown) and [here](https://george-hawkins.github.io/basic-gfm-jekyll/redcarpet-extensions.html) (note: *"superscript"* in the redcarpet extension seems to be incompatible with mathjax, so I removed that from _config.yml)
+
+And some other notes:
+
+1. DO NOT trust jekyll's --watch function: it seems to ignore changes in _config.yml, USE `jekyll build` each time you changed this file or you suspect something is not updated when using --watch!
+2. jekyll's --watch seems to ignore _config.yml's redcarpet extension, this maybe a bug that I should report on GitHub...

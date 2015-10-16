@@ -42,6 +42,12 @@ body {
 	padding: 10px 10px 10px 10px;
 }
 
+#content li p {
+	padding: 0 0 0 0;
+	margin-bottom: 5px;
+	margin-top: 5px;
+}
+
 /*--Table--*/
 table {
 	*border-collapse: collapse; /* IE7 and lower */

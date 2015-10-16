@@ -6,25 +6,26 @@ title: Code @ Chen Feng
 <table class="bordered" style="border-style: dotted;">
 	<tbody>
 		<tr id="cv2cg"><!-- cv2cg -->
-			<td rowspan="4" style="width: 60%; text-align: justified; vertical-align:top;">
-				<h1><a href="http://code.google.com/p/cv2cg/">cv2cg</a></h1>
+			<td rowspan="3" style="width: 60%; text-align: justified; vertical-align:top;">
+				<h1><a href="http://github.com/simbaforrest/cv2cg/">cv2cg</a></h1>
 				<p>a lightweight library for computer vision and computer graphics interactions: </p>
-				<blockquote>hg clone https://code.google.com/p/cv2cg</blockquote>
+				<blockquote>git clone https://github.com/simbaforrest/cv2cg.git</blockquote>
 				<h1>apriltag</h1>
 				<p>a mini-version for <strong>apriltag</strong> only is provided (<strong>only depends on opencv</strong>):</p>
-				<blockquote>hg clone https://code.google.com/p/cv2cg#apriltag</blockquote>
+				<blockquote>git clone -b apriltag https://github.com/simbaforrest/cv2cg.git</blockquote>
 				<h2>Feature</h2>
 				<ol>
-					<li>Sparse Point Cloud Reconstruction from 2 Views </li>
+					<!-- <li>Sparse Point Cloud Reconstruction from 2 Views </li> 
 					<li>Camera simulation tool for multiple view geometry algorithm tests </li>
-					<li>Camera switch tool for visualization of point cloud and camera(images) </li>
-					<li>Simple Augmented Reality application using KEG tracker (doc will be available soon...)</li>
+					<li>Camera switch tool for visualization of point cloud and camera(images) </li> -->
+					<li>Simple Augmented Reality application using KEG tracker (doc TBD...)</li>
+					<li>Camera calibration using AprilTag</li>
 					<li>April Tag C++ implementation adapted from <a href="http://april.eecs.umich.edu" rel="nofollow">april.tag java library by april lab @ UM</a> </li>
 				</ol>
 				<h2>Dependency</h2>
 				<ol>
 					<li><a href="http://opencv.willowgarage.com" rel="nofollow">OpenCV</a> </li>
-					<li><a href="http://www.openscenegraph.org/" rel="nofollow">OpenSceneGraph</a> </li>
+					<!--<li><a href="http://www.openscenegraph.org/" rel="nofollow">OpenSceneGraph</a> </li>-->
 					<li><a href="http://eigen.tuxfamily.org/" rel="nofollow">Eigen3</a> </li>
 					<li><a href="http://esm.gforge.inria.fr/ESM.html" rel="nofollow">(ESM, optional)</a> </li>
 				</ol>
@@ -41,13 +42,13 @@ title: Code @ Chen Feng
 			<tr>
 				<td><div class="videoWrapper"><iframe frameborder="0" allowfullscreen src="http://www.youtube.com/embed/d9h_rd6bAwE?rel=0"></iframe></div></td>
 			</tr>
-			<tr>
+			<!-- <tr>
 				<td><div class="videoWrapper"><iframe frameborder="0" allowfullscreen src="http://www.youtube.com/embed/sV_5emzItf0?rel=0"></iframe></div></td>
-			</tr>
+			</tr> -->
 		</tr>
 		<tr id="vpdetection"><!-- vpdetection -->
 			<td rowspan="3" style="width: 60%; text-align: justified; vertical-align:top;">
-				<h1><a href="http://code.google.com/p/vpdetection/">vpdetection</a></h1>
+				<h1><a href="http://github.com/simbaforrest/vpdetection/">vpdetection</a></h1>
 				<h2>Goal</h2>
 				<p>To detect vanishing point using jlinkage+lsd, or more precisely, group line segments by their corresponding vanishing point(vp). </p>
 				<h2>Reference</h2>
@@ -60,7 +61,7 @@ title: Code @ Chen Feng
 				</ol>
 				<h2>Install</h2>
 				<ol>
-					<li>Download Source: hg clone <a href="https://vpdetection.googlecode.com/hg/">https://vpdetection.googlecode.com/hg/</a> vpdetection </li>
+					<li>Download Source: git clone https://github.com/simbaforrest/vpdetection.git</li>
 					<li>If you are using Win32+Matlab2010, all binary is within this folder, just go into the matlab folder and type in matlab >run, enjoy it! </li>
 					<li>If you are using linux+Matlab, please stay in the main folder and type in matlab >install, enjoy it! </li>
 				</ol>
@@ -69,13 +70,13 @@ title: Code @ Chen Feng
 			</td>
 			<tr>
 				<td><div class="figure">
-					<a target="_blank" href="http://vpdetection.googlecode.com/files/indoor-out.png">					<img src="http://vpdetection.googlecode.com/files/indoor-out.png" alt="Indoor scene result" width="100%"></a>
+					<a target="_blank" href="https://raw.githubusercontent.com/simbaforrest/vpdetection/master/data/indoor-out.png">					<img src="https://raw.githubusercontent.com/simbaforrest/vpdetection/master/data/indoor-out.png" alt="Indoor scene result" width="100%"></a>
 					<div class="caption">Indoor scene result</div>
 				</div></td>
 			</tr>
 			<tr>
 				<td><div class="figure">
-					<a target="_blank" href="http://vpdetection.googlecode.com/files/indoor-out.png">					<img src="http://vpdetection.googlecode.com/files/outdoor-out.png" width="100%"/></a>
+					<a target="_blank" href="https://raw.githubusercontent.com/simbaforrest/vpdetection/master/data/indoor-out.png">					<img src="https://raw.githubusercontent.com/simbaforrest/vpdetection/master/data/outdoor-out.png" width="100%"/></a>
 					<div class="caption">Outdoor scene result</div>
 				</div></td>
 			</tr>
