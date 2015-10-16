@@ -11,7 +11,7 @@ After basic setup of the blog according to GitHub and Jekyll, some other feature
 
 1. [comments](http://www.perfectlyrandom.org/2014/06/29/adding-disqus-to-your-jekyll-powered-github-pages/)
 2. [tags](http://christianspecht.de/2014/10/25/separate-pages-per-tag-category-with-jekyll-without-plugins/)
-3. [mathjax](http://haixing-hu.github.io/programming/2013/09/20/how-to-use-mathjax-in-jekyll-generated-github-pages/) (note: it seems that `markdown: redcarpet` also works)  
+3. [mathjax](http://haixing-hu.github.io/programming/2013/09/20/how-to-use-mathjax-in-jekyll-generated-github-pages/) and [here](https://gist.github.com/mikelove/cbf6eb431406852ba725) (note: it seems that `markdown: redcarpet` also works)  
 like this  
 $$
 a^2 + b^2 = c^2,
@@ -33,3 +33,4 @@ And some other notes:
 
 1. DO NOT trust jekyll's --watch function: it seems to ignore changes in _config.yml, USE `jekyll build` each time you changed this file or you suspect something is not updated when using --watch!
 2. jekyll's --watch seems to ignore _config.yml's redcarpet extension, this maybe a bug that I should report on GitHub...
+3. [MathJax/Latex help](http://meta.math.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference)
