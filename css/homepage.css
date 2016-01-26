@@ -7,6 +7,16 @@ body {
     color: #444;
 }
 
+#visitormap {
+	width: 20%;
+	vertical-align: middle;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
 #myname {
 	vertical-align: middle;
 	text-align: center;
