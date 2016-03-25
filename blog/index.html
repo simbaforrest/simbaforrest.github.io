@@ -3,8 +3,9 @@ layout: blog
 title: Chen Feng's Blog
 ---
 	<h1>Chen Feng's Blog</h1>
+	<a href="tags">[All Tags]</a>
 	<ul class="posts">
-		{% for post in site.posts %}
+		{% for post in site.categories.blog %}
 			<li>
 			{% include post_list.html %}
 			</li>
