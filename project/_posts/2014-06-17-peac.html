@@ -1,0 +1,12 @@
+<tr id="PEAC">
+	<td style="width: 40%; text-align: center;"><img alt="System Overview" src="/fig/ahc.png" width="90%" /></td>
+	<td rowspan="2" style="width: 60%; text-align: center; vertical-align:top;">
+		<p><h3>Fast Plane Extraction in Organized Point Clouds<br>Using Agglomerative Hierarchical Clustering</h3></p>
+		<p style="text-align: justify;">Real-time plane extraction in 3D point clouds is crucial to many robotics applications. We present a novel algorithm for reliably detecting multiple planes in real time in organized point clouds obtained from devices such as Kinect sensors. By uniformly dividing such a point cloud into non-overlapping groups of points in the image space, we first construct a graph whose node and edge represent a group of points and their neighborhood respectively. We then perform an agglomerative hierarchical clustering on this graph to systematically merge nodes belonging to the same plane until the plane fitting mean squared error exceeds a threshold. Finally we refine the extracted planes using pixel-wise region growing. Our experiments demonstrate that the proposed algorithm can reliably detect all major planes in the scene at a frame rate of more than <b>35Hz for 640x480 point clouds</b>, which to the best of our knowledge is much faster than state-of-the-art algorithms.</p>
+		<p style="text-align: justify;">See our <a href="/publication.html#feng2014ahc">ICRA 2014 paper</a>, <a href="/upload/2014.icra.Feng+Taguchi+Kamat.pdf"> and presentation slides</a>.</p>
+		<p style="text-align: justify;"><b>Finally, our C++ implementation with a Matlab interface are released here: <a href="http://www.merl.com/research/license">PEAC</a>.</b></p>
+	</td>
+	<tr>
+		<td style="width: 40%; text-align: center;"><div class="videoWrapper"><iframe allowfullscreen="" frameborder="0" src="http://www.youtube.com/embed/1a1ehnW7lkc"></iframe></div></td>
+	</tr>
+</tr>
