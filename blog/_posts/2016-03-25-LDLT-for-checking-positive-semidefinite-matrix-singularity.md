@@ -96,7 +96,7 @@ Or a more numerically stable check:
 {: #cpp_ldlt_check_singularity}
 ```cpp
 Eigen::VectorXd D = B.ldlt().vectorD().cwiseAbs();
-bool is_B_singular = D.maxCoeff() < (D.minCoeff() * 1e8); // similar to check matrix condition number in some sense
+bool is_B_singular = D.maxCoeff() > (D.minCoeff() * 1e8); // similar to check matrix condition number in some sense
 ```
 
 # However Eigen library seems to say no
