@@ -43,3 +43,15 @@ ul.posts {
 ul.posts li {
     list-style: none;
 }
+blockquote {
+    display: block;
+    padding: 5px;
+    color: #333;
+    background-color: #C7E5FF;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+div.footnotes {
+    font-size: 80%;
+    border-top: 1px solid #ccc;
+}
