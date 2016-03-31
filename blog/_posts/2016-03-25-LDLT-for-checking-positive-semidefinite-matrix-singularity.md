@@ -116,5 +116,13 @@ Or maybe the documentation only means that I cannot use the test of $rank([B,c])
 to test if the system still has solution even if $B$ is singular?
 (i.e., "$B$ is singular" is **not equivalent to** "$Bx=c$ has no solution")
 If the later is what the documentation means, then Eigen's domentation is really *not saying no to our approach*.
+<del>
 **This is the part that I'm not sure yet and need to ask Eigen's develop team for confirmation**,
 althought according to my own experiments with Eigen it seems to work pretty well using [the above code](#cpp_ldlt_check_singularity).
+</del>
+
+OK, [here is what Eigen's expert says](https://forum.kde.org/viewtopic.php?f=74&t=131931&p=354419#p354417):
+
+>Such a test is indeed not reliable, it will only warn you that the problem might not be reliably addressed by a LDLT decomposition and that using a rank revealing QR of SVD might be safer.
+
+So I guess it still make sense to use [the above code](#cpp_ldlt_check_singularity) to check...
