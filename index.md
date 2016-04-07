@@ -2,7 +2,7 @@
 layout: homepage
 title: Chen Feng's Homepage
 ---
-**I graduated in 2015, and I'm currently visiting [Mitsubishi Electric Research Laboratories (MERL)](http://www.merl.com/) as [a visiting researcher](http://www.merl.com/people/cfeng).**
+**I graduated in 2015, and I'm currently visiting [Mitsubishi Electric Research Laboratories (MERL)](http://www.merl.com/) as [a visiting research scientist](http://www.merl.com/people/cfeng).**
 
 I obtained my:
 
