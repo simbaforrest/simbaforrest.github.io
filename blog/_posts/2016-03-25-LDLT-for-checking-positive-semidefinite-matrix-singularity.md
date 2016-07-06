@@ -3,7 +3,7 @@ layout: post
 type: mathpost
 title: LDLT for Checking Positive Semidefinite Matrix's Singularity
 date: 2016-03-25
-modified: 2016-03-29
+modified: 2016-07-05
 comments: true
 tags: math note code
 ---
@@ -125,4 +125,14 @@ OK, [here is what Eigen's expert says](https://forum.kde.org/viewtopic.php?f=74&
 
 >Such a test is indeed not reliable, it will only warn you that the problem might not be reliably addressed by a LDLT decomposition and that using a rank revealing QR of SVD might be safer.
 
+<del>
 So I guess it still make sense to use [the above code](#cpp_ldlt_check_singularity) to check...
+</del>
+
+**Updated**:
+
+According to the [ceres solver's documentation](http://ceres-solver.org/solving.html#Covariance::Options::algorithm_type__CovarianceAlgorithmType):
+
+>Cholesky factorization is not a rank-revealing factorization, i.e., it cannot reliably detect when the matrix being factorized is not of full rank.
+
+I think it is NOT OK to use [the above code](#cpp_ldlt_check_singularity) to check...
