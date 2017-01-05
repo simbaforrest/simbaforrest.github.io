@@ -3,7 +3,7 @@ layout: post
 type: mathpost
 title: How to derive essential matrix from camera projection matrices?
 date: 2016-12-21
-modified: 2016-12-21
+modified: 2017-01-04
 comments: true
 tags: math note
 ---
@@ -62,9 +62,9 @@ $$
 \mathbf{t} \times \mathbf{t}=0 \Rightarrow & \nonumber \\
 & (\mathbf{R p_1}) \times \mathbf{p_2} + \mathbf{t} \times (\mathbf{R p_1}) = 0 \nonumber \\
 \text{multiply $\mathbf{p_2}^T$ at both sides} \Rightarrow & \nonumber \\
-& (\mathbf{p_2}^T \mathbf{R p_1}) \times \mathbf{p_2} + \mathbf{p_2}^T \mathbf{t} \times (\mathbf{R p_1}) = 0 \nonumber \\
+& \mathbf{p_2}^T \Big( (\mathbf{R p_1}) \times \mathbf{p_2} \Big) + \mathbf{p_2}^T \Big( \mathbf{t} \times (\mathbf{R p_1}) \Big) = 0 \nonumber \\
 \mathbf{b}^T \mathbf{a} \times \mathbf{b} = 0 \Rightarrow & \nonumber \\
-& \mathbf{p_2}^T \mathbf{t} \times (\mathbf{R p_1}) = 0 \nonumber \\
+& \mathbf{p_2}^T \Big( \mathbf{t} \times (\mathbf{R p_1}) \Big) = 0 \nonumber \\
 \mathbf{a} \times \mathbf{b} = [\mathbf{a}]_{\times} \mathbf{b} \Rightarrow \nonumber \\
 & \mathbf{p_2}^T [\mathbf{t}]_{\times} \mathbf{R p_1} = 0 \label{eq:essential}
 \end{align}
