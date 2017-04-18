@@ -3,6 +3,7 @@ layout: post
 type: mathpost
 title: How to Write a Matrix Multiplication Layer in Caffe?
 date: 2017-04-17
+modified: 2017-04-18
 comments: true
 tags: math code note caffe
 ---
@@ -18,10 +19,10 @@ However the difference is that the weight matrix $\mathbf{W} \in \mathbb{R}^{M \
 To emulate a matrix multiplication in standard Caffe, as of April, 2017, is still doable but not so straightforward nor efficient, as explained in several stackoverflow discussions[^1][^2].
 
 [^1]:
-    http://stackoverflow.com/a/41658699/2303236
+    <http://stackoverflow.com/a/41658699/2303236>
 
 [^2]:
-    http://stackoverflow.com/a/41580924/2303236
+    <http://stackoverflow.com/a/41580924/2303236>
 
 Since I'm not satisfied with such a solution, I'll describe below how to directly implement a matrix multiplication layer (in C++ for both cpu/gpu).
 
@@ -29,7 +30,7 @@ Since I'm not satisfied with such a solution, I'll describe below how to directl
 Assuming some basic understandings of backward propagation for solving DNN using stochastic gradient descent (SGD), firstly we need to figure out the partial derivatives.
 
 ### Definitions
-Without loss of generality[^3], we have a loss function $l: \mathbb{R}^{M \times N} \to \mathbb{R}$. It accepts a input matrix $\mathbf{Z} \in \mathbb{R}^{M \times N}$, which itself is a matrix function performing matrix multiplication of two input matrices
+Without loss of generality[^3], we have a loss function $l: \mathbb{R}^{M \times N} \to \mathbb{R}$. It accepts an input matrix $\mathbf{Z} \in \mathbb{R}^{M \times N}$, which itself is a matrix function performing matrix multiplication of two input matrices
 $\mathbf{X} \in \mathbb{R}^{M \times K}, \mathbf{Y} \in \mathbb{R}^{K \times N}$, i.e., $\mathbf{Z=XY}$.
 
 [^3]:
@@ -54,6 +55,7 @@ $$
 \text{the transposed $i,j$ is due to numerator-layout} \Rightarrow
 \left( \frac{\partial l(\mathbf{Z})}{\partial \mathbf{X}} \right)_{ji}
 &= \frac{\partial l(\mathbf{Z})}{\partial X_{ij}} \nonumber \\
+tr(\cdot) \text{ comes from the scalar-by-matrix derivative identity } \Rightarrow
 &= tr(\frac{\partial l}{\partial \mathbf{Z}}\frac{\partial \mathbf{Z}}{\partial X_{ij}}) \nonumber \\
 &= tr(\frac{\partial l}{\partial \mathbf{Z}}\mathbf{J}^{ij}\mathbf{Y}) \label{eq:partial_Z_partial_Xij} \\
 &= tr(\mathbf{Y}\frac{\partial l}{\partial \mathbf{Z}}\mathbf{J}^{ij}) \label{eq:partial_l_partial_Xij} \\
@@ -69,7 +71,7 @@ $$
 $$
 
 [^5]:
-    https://en.wikipedia.org/wiki/Matrix_calculus#Scalar-by-matrix_identities
+    <https://en.wikipedia.org/wiki/Matrix_calculus#Scalar-by-matrix_identities>
 
 Note equation $\eqref{eq:partial_Z_partial_Xij}$ comes from expanding $\frac{\partial \mathbf{Z}}{\partial X_{ij}}$ using the chain rule[^6], where the single-entry matrix $\underset{M \times K}{\mathbf{J}^{ij}}$ is $1$ only for the $(i,j)$-th entry and $0$ anywhere else. And equation $\eqref{eq:partial_l_partial_Xij}$ comes from a property of the matrix trace of multiple matrices' product[^7].
 
@@ -137,7 +139,7 @@ Using equation $\eqref{eq:X_diff}$ and $\eqref{eq:Y_diff}$, we can write the bac
 Of course, we need to take care of batched operations, and many other implementation details, following these wonderful tutorials[^8][^9]. A full implementation can be found in [my own version of Caffe](https://github.com/simbaforrest/caffe/blob/master/src/caffe/layers/matrix_multiplication_layer.cpp).
 
 [^8]:
-    https://github.com/BVLC/caffe/wiki/Simple-Example:-Sin-Layer
+    <https://github.com/BVLC/caffe/wiki/Simple-Example:-Sin-Layer>
 
 [^9]:
-    https://chrischoy.github.io/research/making-caffe-layer/
+    <https://chrischoy.github.io/research/making-caffe-layer/>
