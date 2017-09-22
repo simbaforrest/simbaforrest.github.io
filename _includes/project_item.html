@@ -1,0 +1,38 @@
+<tr id="{{ include.id }}"
+    {% if include.affiliation %}
+    data-affiliation="{{ include.affiliation }}"
+    {% endif %}
+    {% if include.year %}
+    data-year="{{ include.year }}"
+    {% endif %}
+    {% if include.keywords %}
+    data-keywords="{{ include.keywords }}"
+    {% endif %}
+    >
+	<td style="width: 20%; text-align: center;">
+	{% if include.teaser_img %}
+	<img alt="{{ include.teaser_img_alt }}" src="{{ include.teaser_img }}" width="100%" />
+	{% endif %}
+	</td>
+	<td style="width: 60%; text-align: left; vertical-align:top;">
+	<p style="text-align: left;"><h4> {{ include.title }} </h4></p>
+	<p style="text-align: justify;"> {{ include.summary }} </p>
+	{% if include.link or include.code or include.ppt %}
+	<p style="text-align: right;">See our 
+	{% if include.link %}
+	<a href="{{ include.link_url }}">{{ include.link }}</a>
+	{% endif %}
+	{% if include.ppt %}
+	<a href="{{ include.ppt_url }}">{{ include.ppt }}</a>
+	{% endif %}
+	{% if include.code %}
+	<a href="{{ include.code_url }}">{{ include.code }}</a>
+	{% endif %}
+	.</p>
+	{% endif %}
+	</td>
+	{% if include.youtube %}
+	<td style="width: 20%; text-align: center;"><div class="videoWrapper"><iframe allowfullscreen="" frameborder="0" src="{{ include.youtube }}"></iframe></div>
+	</td>
+	{% endif %}
+</tr>

@@ -49,7 +49,7 @@ body {
 }
 
 #content p {
-	padding: 10px 10px 10px 10px;
+	padding: -1px 10px 0px 10px;
 }
 
 #content li p {
@@ -74,7 +74,7 @@ table {
 }
 
 .bordered td:hover {
-    background: #fbf8e9;
+    background: rgba(27, 127, 204, 0.2);
     -o-transition: all 0.1s ease-in-out;
     -webkit-transition: all 0.1s ease-in-out;
     -moz-transition: all 0.1s ease-in-out;
@@ -83,12 +83,20 @@ table {
 }
 
 .bordered tr:target {
-	background: yellow;
+	background: rgba(27, 127, 204, 0.42);
 }
 
 .bordered td, .bordered th {
-    padding: 10px;
-    text-align: left;    
+    padding: 2px;
+    text-align: left;
+}
+
+.bordered td {
+    border-style: dotted;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-width: thin;
 }
 
 .bordered th {
@@ -102,10 +110,6 @@ table {
 	border-top: none;
 }
 
-.bordered td:first-child, .bordered th:first-child {
-	border-style: none;
-}
-
 .bordered th:first-child {
     -moz-border-radius: 10px 0 0 10px;
     -webkit-border-radius: 10px 0 0 10px;
@@ -116,12 +120,20 @@ table {
     -moz-border-radius: 0 10px 10px 0;
     -webkit-border-radius: 0 10px 10px 0;
     border-radius: 0 10px 10px 0;
+
+    border-style: none;
 }
 
-.bordered th:only-child{
+.bordered th:only-child {
     -moz-border-radius: 10px 10px 0 0;
     -webkit-border-radius: 10px 10px 0 0;
     border-radius: 10px 10px 0 0;
+
+    border-style: none;
+}
+
+.bordered tr:last-child td {
+    border-style: none;
 }
 
 .bordered tr:last-child td:first-child {
@@ -301,4 +313,24 @@ div.caption{
 }
 #bibtexitem{
 	width:80%;
+}
+
+/*-- go2top button --*/
+#go2topBtn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: rgba(100,100,100,0.3); /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+}
+
+#go2topBtn:hover {
+    background-color: #555; /* Add a dark-grey background on hover */
 }

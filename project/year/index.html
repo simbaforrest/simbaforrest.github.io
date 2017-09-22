@@ -1,0 +1,32 @@
+---
+layout: homepage
+title: Research By Years
+---
+
+<h2>{{ page.title }}</h2>
+
+{% capture years %}
+  {% for post in site.categories.project %}
+      {{ post.year }}
+  {% endfor %}
+{% endcapture %}
+{% assign sortedyears = years | split:' ' | uniq | sort | reverse %}
+
+|
+{% for year in sortedyears %}
+  <a href="#{{ year }}">{{ year }}</a> |
+{% endfor %}
+
+{% for year in sortedyears %}
+  <h3 id="{{ year }}">{{ year }}</h3>
+  <ul>
+  {% for post in site.categories.project %}
+    {% capture year_str %}{{ post.year | plus: 0 }}{% endcapture %}
+    {% if year_str==year %}
+    <li>
+	<a href="/project/#{{ post.short }}">{{ post.title }}</a>
+	</li>
+    {% endif %}
+  {% endfor %}
+  </ul>
+{% endfor %}

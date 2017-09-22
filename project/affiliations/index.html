@@ -1,0 +1,31 @@
+---
+layout: homepage
+title: Research By Affiliations
+---
+
+<h2>{{ page.title }}</h2>
+
+{% capture affiliations %}
+  {% for post in site.categories.project %}
+      {{ post.affiliation }}
+  {% endfor %}
+{% endcapture %}
+{% assign sortedaffiliations = affiliations | split:' ' | uniq | sort %}
+
+|
+{% for affiliation in sortedaffiliations %}
+  <a href="#{{ affiliation }}">{{ affiliation }}</a> |
+{% endfor %}
+
+{% for affiliation in sortedaffiliations %}
+  <h3 id="{{ affiliation }}">{{ affiliation }}</h3>
+  <ul>
+  {% for post in site.categories.project %}
+    {% if post.affiliation contains affiliation %}
+    <li>
+	<span>{{ post.date | date: "%Y" }}</span> : <a href="/project/#{{ post.short }}">{{ post.title }}</a>
+	</li>
+    {% endif %}
+  {% endfor %}
+  </ul>
+{% endfor %}
