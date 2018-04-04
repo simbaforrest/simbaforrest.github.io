@@ -3,7 +3,7 @@ title: "FoldingNet: Point Cloud Auto-encoder via Deep Grid Deformation"
 short: FoldingNet
 year: 2017
 affiliation: MERL
-tags: algorithm deep-learning point-cloud shape
+tags: algorithm deep-learning point-cloud shape graph
 ---
 {% include project_item.html
 	id=page.short
@@ -17,7 +17,7 @@ tags: algorithm deep-learning point-cloud shape
 	youtube="https://www.youtube.com/embed/csC6SodV6vk?rel=0"
 	summary="The state-of-the-art unsupervised deep auto-encoder of point clouds which reconstruct order point clouds from unordered input, useful for autonomous driving, robotic scene understanding, etc."
 	link="[CVPR'18 spotlight paper (acceptance rate<10%)],"
-	link_url="http://www.merl.com/publications/docs/TR2017-TODO.pdf"
+	link_url="https://arxiv.org/abs/1712.07262"
 	code="[code(stay tuned!)]"
 	code_url="http://www.merl.com/research/license#FoldingNet"
 %}
