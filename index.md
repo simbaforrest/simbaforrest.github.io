@@ -2,7 +2,9 @@
 layout: homepage
 title: Chen Feng's Homepage
 ---
-**I'm currently [a research scientist](http://www.merl.com/people/cfeng) at [Mitsubishi Electric Research Laboratories (MERL)](http://www.merl.com/).**
+**In August 2018, I will join New York University (NYU) as an assistant professor jointly in the [Department of Civil and Urban Engineering](https://engineering.nyu.edu/academics/departments/civil-and-urban-engineering) and the [Department of Mechanical and Aerospace Engineering](https://engineering.nyu.edu/academics/departments/mechanical-and-aerospace-engineering), and keep working on robotic vision and robotics for construction and civil engineering!**
+
+I'm currently [a research scientist](http://www.merl.com/people/cfeng) at [Mitsubishi Electric Research Laboratories (MERL)](http://www.merl.com/).
 
 I obtained my:
 
