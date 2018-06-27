@@ -14,7 +14,7 @@ tags: algorithm deep-learning point-cloud shape graph
 
 	teaser_img="/fig/FoldingNet.jpg"
 	teaser_img_alt="FoldingNet overview"
-	youtube="https://www.youtube.com/embed/csC6SodV6vk?rel=0"
+	youtube="https://www.youtube.com/embed/x1dAV4tP2oo?rel=0"
 	summary="The state-of-the-art unsupervised deep auto-encoder of point clouds which reconstruct order point clouds from unordered input, useful for autonomous driving, robotic scene understanding, etc."
 	link="[CVPR'18 spotlight paper (acceptance rate<10%)],"
 	link_url="https://arxiv.org/abs/1712.07262"
